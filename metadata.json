@@ -1,0 +1,6 @@
+{
+  "name": "Map Tracker embed",
+  "description": "An embeddable web app that displays a Google Map with a tracked route between two positions, customizable via URL parameters.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": []
+}
