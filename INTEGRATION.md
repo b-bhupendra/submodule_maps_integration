@@ -31,6 +31,7 @@ This sub-module synchronizes its entire multi-stop state directly with the URL q
 | `destination`| Yes | End address, landmark, or lat/lng. | `destination=San+Jose,+CA` |
 | `waypoints`  | No  | Intermediate stops, **separated by a pipe (`\|`)**. | `waypoints=Palo+Alto\|Cupertino` |
 | `travelMode` | No  | Mode options: `DRIVING`, `WALKING`, `BICYCLING`, `TRANSIT`. Defaults to `DRIVING`. | `travelMode=WALKING` |
+| `minimal` | No | Strips away the GeoTrack sidebar & header, rendering **only the map interface**. | `minimal=true` |
 
 ---
 

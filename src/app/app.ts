@@ -62,6 +62,7 @@ export class App implements OnInit, OnDestroy {
     return this.form.get('stops') as FormArray<FormControl<string | null>>;
   }
 
+  isMinimalView = signal(false);
   isConfigured = signal(true); // Will set to false if API key is missing
   showApiKeyDialog = signal(false);
   customApiKeyControl = new FormControl('');
@@ -95,6 +96,12 @@ export class App implements OnInit, OnDestroy {
       this.initMap();
 
       this.route.queryParams.subscribe(params => {
+        if (params['minimal'] === 'true') {
+          this.isMinimalView.set(true);
+        } else {
+          this.isMinimalView.set(false);
+        }
+
         if (params['origin'] && params['destination']) {
           const wps = params['waypoints'] ? params['waypoints'].split('|') : [];
           this.stops.clear();
